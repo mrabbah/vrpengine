@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problem xmlns="http://www.w3schools.com"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com vrp_xml_schema.xsd">
+     <problemType>
+          <fleetSize>INFINITE</fleetSize>
+     </problemType>
+     <vehicles>
+          <vehicle>
+               <id>vehicle</id>
+               <typeId>vehicleType</typeId>
+               <startLocation>
+                    <id>0</id>
+               </startLocation>
+               <endLocation>
+                    <id>8</id>
+               </endLocation>
+               <timeSchedule>
+                    <start>0.0</start>
+                    <end>1.7976931348623157E308</end>
+               </timeSchedule>
+               <returnToDepot>true</returnToDepot>
+          </vehicle>
+     </vehicles>
+     <vehicleTypes>
+          <type>
+               <id>vehicleType</id>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+               <costs>
+                    <fixed>0.0</fixed>
+                    <distance>1.0</distance>
+                    <time>1.0</time>
+               </costs>
+          </type>
+     </vehicleTypes>
+     <services>
+          <service id="point6" type="service">
+               <locationId>6</locationId>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+               <duration>2.0</duration>
+               <timeWindows>
+                    <timeWindow>
+                         <start>0.0</start>
+                         <end>1.7976931348623157E308</end>
+                    </timeWindow>
+               </timeWindows>
+          </service>
+          <service id="point3" type="service">
+               <locationId>3</locationId>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+               <duration>2.0</duration>
+               <timeWindows>
+                    <timeWindow>
+                         <start>0.0</start>
+                         <end>1.7976931348623157E308</end>
+                    </timeWindow>
+               </timeWindows>
+          </service>
+     </services>
+     <shipments>
+          <shipment id="segment1">
+               <pickup>
+                    <locationId>1</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>15.0</start>
+                              <end>50.0</end>
+                         </timeWindow>
+                    </timeWindows>
+               </pickup>
+               <delivery>
+                    <locationId>2</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </delivery>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+          </shipment>
+          <shipment id="segment2">
+               <pickup>
+                    <locationId>2</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </pickup>
+               <delivery>
+                    <locationId>3</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </delivery>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+          </shipment>
+          <shipment id="segment4">
+               <pickup>
+                    <locationId>4</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </pickup>
+               <delivery>
+                    <locationId>5</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </delivery>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+          </shipment>
+          <shipment id="segment5">
+               <pickup>
+                    <locationId>5</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </pickup>
+               <delivery>
+                    <locationId>6</locationId>
+                    <duration>2.0</duration>
+                    <timeWindows>
+                         <timeWindow>
+                              <start>0.0</start>
+                              <end>1.7976931348623157E308</end>
+                         </timeWindow>
+                    </timeWindows>
+               </delivery>
+               <capacity-dimensions>
+                    <dimension index="0">0</dimension>
+               </capacity-dimensions>
+          </shipment>
+     </shipments>
+     <solutions>
+          <solution>
+               <cost>3.575167648138774</cost>
+               <routes>
+                    <route>
+                         <driverId>noDriver</driverId>
+                         <vehicleId>vehicle</vehicleId>
+                         <start>0.0</start>
+                         <act type="pickupShipment">
+                              <shipmentId>segment1</shipmentId>
+                              <arrTime>0.057360935685057735</arrTime>
+                              <endTime>17.0</endTime>
+                         </act>
+                         <act type="pickupShipment">
+                              <shipmentId>segment2</shipmentId>
+                              <arrTime>17.54216992549417</arrTime>
+                              <endTime>19.54216992549417</endTime>
+                         </act>
+                         <act type="deliverShipment">
+                              <shipmentId>segment1</shipmentId>
+                              <arrTime>19.54216992549417</arrTime>
+                              <endTime>21.54216992549417</endTime>
+                         </act>
+                         <act type="pickupShipment">
+                              <shipmentId>segment4</shipmentId>
+                              <arrTime>21.95692622277409</arrTime>
+                              <endTime>23.95692622277409</endTime>
+                         </act>
+                         <act type="service">
+                              <serviceId>point3</serviceId>
+                              <arrTime>24.33267048726572</arrTime>
+                              <endTime>26.33267048726572</endTime>
+                         </act>
+                         <act type="deliverShipment">
+                              <shipmentId>segment2</shipmentId>
+                              <arrTime>26.33267048726572</arrTime>
+                              <endTime>28.33267048726572</endTime>
+                         </act>
+                         <act type="deliverShipment">
+                              <shipmentId>segment4</shipmentId>
+                              <arrTime>29.120020424600174</arrTime>
+                              <endTime>31.120020424600174</endTime>
+                         </act>
+                         <act type="pickupShipment">
+                              <shipmentId>segment5</shipmentId>
+                              <arrTime>31.120020424600174</arrTime>
+                              <endTime>33.12002042460017</endTime>
+                         </act>
+                         <act type="service">
+                              <serviceId>point6</serviceId>
+                              <arrTime>33.953488843355686</arrTime>
+                              <endTime>35.953488843355686</endTime>
+                         </act>
+                         <act type="deliverShipment">
+                              <shipmentId>segment5</shipmentId>
+                              <arrTime>35.953488843355686</arrTime>
+                              <endTime>37.953488843355686</endTime>
+                         </act>
+                         <end>38.51780671245371</end>
+                    </route>
+               </routes>
+          </solution>
+     </solutions>
+</problem>
